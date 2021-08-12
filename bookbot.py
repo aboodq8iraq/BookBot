@@ -7,7 +7,7 @@ import time
 import traceback
 import telebot
 bot = telebot.TeleBot("1821317113:AAFdTrfDnHbQCHMJ0RSS9NQTOGlrPWqeyQc")
-
+channel_id = -1001570199213
 @bot.message_handler(commands=['start'])
 def welcome_help(message):
   while True:
@@ -77,7 +77,7 @@ def welcome_help(message):
             for chunk in rD.iter_content(chunk_size=1024):
               fd.write(chunk)
           i = open('./book.zip', 'rb')
-          bot.send_document(-1001570199513, i,
+          bot.send_document(channel_id, i,
                             caption=f"*Name* 🗃 : {nameBook}\n------------\n*Department* 📂 : {department}\n------------\n*Info* 🧾 : {info}\n------------\n*Copyright* - t.me/bookinfoplus",
                             parse_mode='Markdown', timeout=1000000)
         elif ('pdf') or ('PDF') in str(type):
@@ -88,7 +88,7 @@ def welcome_help(message):
             for chunk in rD.iter_content(chunk_size=1024):
               fd.write(chunk)
           i = open('./book.pdf', 'rb')
-          bot.send_document(-1001570199513, i,
+          bot.send_document(channel_id, i,
                             caption=f"*Name* 🗃 : {nameBook}\n------------\n*Department* 📂 : {department}\n------------\n*Info* 🧾 : {info}\n------------\n*Copyright* - t.me/bookinfoplus",
                             parse_mode='Markdown', timeout=1000000)
         elif ('doc') in str(type):
@@ -99,7 +99,7 @@ def welcome_help(message):
             for chunk in rD.iter_content(chunk_size=1024):
               fd.write(chunk)
           i = open('./book.doc', 'rb')
-          bot.send_document(-1001570199513, i,
+          bot.send_document(channel_id, i,
                             caption=f"*Name* 🗃 : {nameBook}\n------------\n*Department* 📂 : {department}\n------------\n*Info* 🧾 : {info}\n------------\n*Copyright* - t.me/bookinfoplus",
                             parse_mode='Markdown', timeout=1000000)
         elif ('rar') in str(type):
@@ -110,7 +110,7 @@ def welcome_help(message):
             for chunk in rD.iter_content(chunk_size=1024):
               fd.write(chunk)
           i = open('./book.rar', 'rb')
-          bot.send_document(-1001570199513, i,
+          bot.send_document(channel_id, i,
                             caption=f"*Name* 🗃 : {nameBook}\n------------\n*Department* 📂 : {department}\n------------\n*Info* 🧾 : {info}\n------------\n*Copyright* - t.me/bookinfoplus",
                             parse_mode='Markdown', timeout=1000000)
         sleep(300)

@@ -6,7 +6,7 @@ from time import sleep
 import time
 import traceback
 import telebot
-bot = telebot.TeleBot("1821317113:AAFdTrfDnHbQCHMJ0RSS9NQTOGlrPWqeyQc")
+bot = telebot.TeleBot("1821217113:AAFdTsrfDnHbQCHMJ0RSS9NQTOGlrPWqeyQc")
 channel_id = -1001570199213
 @bot.message_handler(commands=['start'])
 def welcome_help(message):
